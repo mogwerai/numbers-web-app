@@ -1,0 +1,70 @@
+.game-container {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.tile {
+  height: 90px;
+  border: 2px solid #666;
+  border-radius: 8px;
+  background: #f2f2f2;
+  color: #111;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.tile.selected {
+  outline: 3px solid #2563eb;
+  outline-offset: 1px;
+  background: #dbeafe;
+}
+
+.tile.correct,
+.tile.correct:disabled {
+  background: #16a34a;
+  border-color: #15803d;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.tile.incorrect,
+.tile.incorrect:disabled {
+  background: #dc2626;
+  border-color: #b91c1c;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.guess-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.guess-form input {
+  width: 90px;
+  padding: 0.35rem 0.5rem;
+}
+
+.guess-form button,
+.restart {
+  padding: 0.45rem 0.75rem;
+}
+
+.restart {
+  margin-top: 1rem;
+}
+
+.status {
+  margin-top: 0.75rem;
+}
